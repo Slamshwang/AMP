@@ -56,7 +56,7 @@
         "UpdateStageName": "Downloading MB2 Server files",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "Executable",
-        "UpdateSourceData": "./jka/server/MBII_CommandLine_Update_XPlatform.exe",
+        "UpdateSourceData": "{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": true,
