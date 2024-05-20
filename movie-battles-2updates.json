@@ -1,33 +1,52 @@
 [
     {
-        "UpdateStageName": "Downloading Open JK Client",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://github.com/JACoders/OpenJK/releases/download/latest/OpenJK-windows-x86_64.zip",
-        "UpdateSourceArgs": "6020",
-        "UpdateSourceTarget": "jka/server",
-        "UnzipUpdateSource": true,
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true,
-        "OneShot": false
+        "UpdateStageName":"SteamCMD Game Files Download",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"SteamCMD",
+        "UpdateSourceData":"6020",
+        "UpdateSourceTarget":"{{$FullRootDir}}client",
+        "ForceDownloadPlatform":"Windows"
     },
     {
-        "UpdateStageName": "Downloading Jedi Academy Game Files",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "SteamCMD",
-        "UpdateSourceData": "6020",
-        "UpdateSourceArgs": "6020",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": true,
-        "OneShot": false
+        "UpdateStageName":"Create Base Directory",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"CreateDirectory",
+        "UpdateSourceArgs":"{{$FullBaseDir}}base"
+    },
+    {
+        "UpdateStageName":"Client File Copy",
+        "UpdateSourcePlatform":"Windows",
+        "UpdateSource":"Executable",
+        "UpdateSourceData":"cmd.exe",
+        "UpdateSourceArgs":"/C xcopy /E /Y /I jka\\client\\GameData\\base\\assets*.pk3 jka\\server\\base\\ && rmdir /Q /S jka\\client\\",
+        "SkipOnFailure":false
+    },
+    {
+        "UpdateStageName":"OpenJK Download",
+        "UpdateSourcePlatform":"Windows",
+        "UpdateSource":"GithubRelease",
+        "UpdateSourceArgs":"JACoders/OpenJK",
+        "UpdateSourceData":"OpenJK-windows-x86_64.zip",
+        "UpdateSourceTarget":"{{$FullBaseDir}}",
+        "UnzipUpdateSource":true,
+        "OverwriteExistingFiles":true,
+        "DeleteAfterExtract":true
+    },
+    {
+        "UpdateStageName":"Server.cfg Download",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"FetchURL",
+        "UpdateSourceData":"https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/jedi-academyserver.cfg",
+        "UpdateSourceArgs":"server.cfg",
+        "UpdateSourceTarget":"{{$FullBaseDir}}base",
+        "OverwriteExistingFiles":false
     },
     {
         "UpdateStageName": "Downloading MB2 CLI Updater",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://www.moviebattles.org/download/MBII_CLI_Updater.zip",
-        "UpdateSourceTarget": "jka/server",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,

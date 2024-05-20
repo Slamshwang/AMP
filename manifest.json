@@ -1,10 +1,9 @@
 {
     "id": "b70aa211-5826-401b-8197-424b8cd5ad84",
-    "authors": [
-        "Chris - Made with AMP Config Generator"
-    ],
-    "origin": "https://github.com/Chris - Made with AMP Config Generator/AMPTemplates.git",
-    "url": "https://github.com/Chris - Made with AMP Config Generator/AMPTemplates",
+    "authors": ["Chris - Made with AMP Config Generator"],
+    "origin": "https://github.com/Slamshwang/AMPTemplates.git",
+    "url": "https://github.com/Slamshwang/AMPTemplates",
     "imagefile": "",
-    "prefix": "Chris - Made with AMP Config Generator"
+    "prefix": "",
+    "repotype": "AppTemplates"
 }
