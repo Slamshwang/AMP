@@ -1,0 +1,46 @@
+[
+    {
+        "UpdateStageName": "Downloading Open JK Client",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://github.com/JACoders/OpenJK/releases/download/latest/OpenJK-windows-x86_64.zip",
+        "UpdateSourceArgs": "6020",
+        "UpdateSourceTarget": "jka/server",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    },
+    {
+        "UpdateStageName": "Downloading Jedi Academy Game Files",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "6020",
+        "UpdateSourceArgs": "6020",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    },
+    {
+        "UpdateStageName": "Downloading MB2 CLI Updater",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://www.moviebattles.org/download/MBII_CLI_Updater.zip",
+        "UpdateSourceTarget": "jka/server",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    },
+    {
+        "UpdateStageName": "Downloading MB2 Server files",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "./jka/server/MBII_CommandLine_Update_XPlatform.exe",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
+    }
+]
