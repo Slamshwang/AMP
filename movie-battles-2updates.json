@@ -52,15 +52,16 @@
         "DeleteAfterExtract": true,
         "OneShot": false
     },
-    {
-        "UpdateStageName": "Downloading MB2 Server files",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe",
-        "UpdateSourceArgs": "--no-console-ops"
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true,
-        "OneShot": false
+    { 
+    "UpdateStageName": "Set Environment Variables and Run Executable",
+    "UpdateSourcePlatform": "Windows",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "cmd.exe",
+    "UpdateSourceArgs": "/c set DOTNET_CLI_TELEMETRY_OPTOUT=1 && set DOTNET_NOLOGO=1 && {{$FullBaseDir}}\\MBII_CommandLine_Update_XPlatform.exe --no-console-ops",
+    "UnzipUpdateSource": false,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": true,
+    "OneShot": false
     }
+
 ]
