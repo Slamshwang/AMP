@@ -57,7 +57,7 @@
     "UpdateSourcePlatform": "Windows",
     "UpdateSource": "Executable",
     "UpdateSourceData": "cmd.exe",
-    "UpdateSourceArgs": "/c set DOTNET_CLI_TELEMETRY_OPTOUT=1 && set DOTNET_NOLOGO=1 && {{$FullBaseDir}}\\MBII_CommandLine_Update_XPlatform.exe --no-console-ops",
+    "UpdateSourceArgs": "/c set DOTNET_CLI_TELEMETRY_OPTOUT=1 && set DOTNET_NOLOGO=1 && {{$FullBaseDir}}\\MBII_CommandLine_Update_XPlatform.exe --no-console-ops 2>&1",
     "UnzipUpdateSource": false,
     "OverwriteExistingFiles": true,
     "DeleteAfterExtract": true,
