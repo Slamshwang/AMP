@@ -53,11 +53,11 @@
         "OneShot": false
     }
      {
-    "UpdateStageName": "Set Environment Variables and Run Executable",
+    "UpdateStageName": "Running MBII CommandLine Update",
     "UpdateSourcePlatform": "Windows",
     "UpdateSource": "Executable",
-    "UpdateSourceData": "cmd.exe",
-    "UpdateSourceArgs": "dotnet {{$FullBaseDir}}\\MBII_CommandLine_Update_XPlatform.exe -s",
+    "UpdateSourceData": "powershell.exe",
+    "UpdateSourceArgs": "-ExecutionPolicy Bypass -File \"{{$FullBaseDir}}\\patcher.ps1\"",
     "UnzipUpdateSource": false,
     "OverwriteExistingFiles": true,
     "DeleteAfterExtract": true,
