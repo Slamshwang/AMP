@@ -51,17 +51,5 @@
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
         "OneShot": false
-    },
-    { 
-    "UpdateStageName": "Running MBII CommandLine Update",
-    "UpdateSourcePlatform": "Windows",
-    "UpdateSource": "Executable",
-    "UpdateSourceData": "powershell.exe",
-    "UpdateSourceArgs": "-ExecutionPolicy Bypass -File \"{{$FullBaseDir}}\\Mb2update.ps1\"",
-    "UnzipUpdateSource": false,
-    "OverwriteExistingFiles": true,
-    "DeleteAfterExtract": true,
-    "OneShot": false
     }
-
 ]
