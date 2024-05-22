@@ -62,5 +62,5 @@
     "OverwriteExistingFiles": true,
     "DeleteAfterExtract": true,
     "OneShot": false
-        {
+    }
 ]
