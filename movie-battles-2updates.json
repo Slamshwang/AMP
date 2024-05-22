@@ -52,4 +52,15 @@
         "DeleteAfterExtract": true,
         "OneShot": false
     }
+     {
+    "UpdateStageName": "Set Environment Variables and Run Executable",
+    "UpdateSourcePlatform": "Windows",
+    "UpdateSource": "Executable",
+    "UpdateSourceData": "cmd.exe",
+    "UpdateSourceArgs": "dotnet {{$FullBaseDir}}\\MBII_CommandLine_Update_XPlatform.exe -s",
+    "UnzipUpdateSource": false,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": true,
+    "OneShot": false
+        {
 ]
