@@ -22,18 +22,6 @@
         "EnumValues":{}
     },
     {
-        "DisplayName":"Server Mod Name",
-        "Category":"MB2 Server Settings",
-        "Description":"Sets the name of the mod directory to load, allowing the use of third-party JKA mods. Don't change this from the default 'base' unless you know what you are doing!",
-        "Keywords":"server,mod,directory,game",
-        "FieldName":"mod",
-        "InputType":"text",
-        "ParamFieldName":"mod",
-        "DefaultValue":"base",
-        "Placeholder":"base",
-        "EnumValues":{}
-    },
-    {
         "DisplayName":"Make Server Public",
         "Category":"MB2 Server Settings",
         "Description":"If enabled, the server will be visible publicly. Otherwise it will only be accessible from the LAN",
@@ -47,6 +35,17 @@
             "False":"1",
             "True":"2"
         }
+    },
+        {
+        "DisplayName":"Server Discord",
+        "Category":"MB2 Server Settings",
+        "Description":"Set Discord invite code to show Discord link next to listing at servers.moviebattles.org",
+        "Keywords":"discord,name,discordserver",
+        "FieldName":"discord",
+        "InputType":"text",
+        "ParamFieldName":"discord",
+        "DefaultValue":"",
+        "EnumValues":{}
     },
     {
         "DisplayName":"Require Server Password",
@@ -62,7 +61,7 @@
             "True":"1"
         }
     },
-    {
+     {
         "DisplayName":"Server Password",
         "Category":"MB2 Server Settings",
         "Description":"Sets the password required to connect to the server. Default is no password. Require Server Password must also be enabled",
@@ -70,6 +69,28 @@
         "FieldName":"g_password",
         "InputType":"password",
         "ParamFieldName":"g_password",
+        "DefaultValue":"",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"RCON admin password",
+        "Category":"MB2 Server Settings",
+        "Description":"Rcon admin password - CHANGE THIS",
+        "Keywords":"rcon,password,rconpassword",
+        "FieldName":"rconpassword",
+        "InputType":"password",
+        "ParamFieldName":"rconpassword",
+        "DefaultValue":"",
+        "EnumValues":{}
+    },
+      {
+        "DisplayName":"Smod admin password",
+        "Category":"MB2 Server Settings",
+        "Description":"Smod admin password - CHANGE THIS",
+        "Keywords":"smod,password,smodpassword",
+        "FieldName":"g_smodAdminPassword_1",
+        "InputType":"password",
+        "ParamFieldName":"g_smodAdminPassword_1",
         "DefaultValue":"",
         "EnumValues":{}
     },
@@ -85,6 +106,20 @@
         "EnumValues":{}
     },
     {
+        "DisplayName":"Anti Cheat",
+        "Category":"MB2 Server Settings",
+        "Description":"Cheating or unverified clients will be automatically kicked. 0 = disabled, 1 = enabled.",
+        "Keywords":"anticheat,cheat,system",
+        "FieldName":"g_AntiCheat",
+        "InputType":"checkbox",
+        "ParamFieldName":"g_AntiCheat",
+        "DefaultValue":"1",
+        "EnumValues":{
+            "False":"0",
+            "True":"1"
+        }
+    },
+    {
         "DisplayName":"Pure Server Mode",
         "Category":"MB2 Server Settings",
         "Description":"Sets whether modified client files are allowed",
@@ -97,6 +132,88 @@
             "0":"Any modified files allowed",
             "1":"No modified files allowed"
         }
+    },
+        {
+        "DisplayName":"Authenticity Level",
+        "Category":"MB2 Server Settings",
+        "Description":"Movie Battles Mode Setting",
+        "Keywords":"auth,authentic,semi-authentic,open,legends",
+        "FieldName":"g_Authenticity",
+        "InputType":"enum",
+        "ParamFieldName":"g_Authenticity",
+        "DefaultValue":"0",
+        "EnumValues":{
+            "0":"Open",
+            "1":"Semi-Authentic"
+            "2":"Full-Authentic"
+            "3":"Duel"
+            "4":"Legends"
+        }
+    },
+    {
+        "DisplayName":"Team Killer Spectator",
+        "Category":"MB2 Server Settings",
+        "Description":"Player will be forced to spectate if this many TK Points are acquired for team kills or hurting teammates. 0 = Disabled.",
+        "Keywords":"tk,spec,kick,forgive,points,tkpoints,team,kill",
+        "FieldName":"TK Points",
+        "InputType":"number",
+        "ParamFieldName":"TK_Spec",
+        "DefaultValue":"0",
+        "Placeholder":"0",
+        "Suffix":"points",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Team Killer Kick",
+        "Category":"MB2 Server Settings",
+        "Description":"Player will be kicked and temp-banned if this many TK Points are acquired for team kills or hurting teammates. 0 = Disabled.",
+        "Keywords":"tk,spec,kick,points,tkpoints,team,kill",
+        "FieldName":"TK Points",
+        "InputType":"number",
+        "ParamFieldName":"TK_Kick",
+        "DefaultValue":"0",
+        "Placeholder":"0",
+        "Suffix":"points",
+        "EnumValues":{}
+    },
+     {
+        "DisplayName":"Team Killer Rounds to Forgive",
+        "Category":"MB2 Server Settings",
+        "Description":"How many rounds must pass without any TKing by the player before automatic forgiving of TK points applies. 0 = Always.",
+        "Keywords":"tk,forgive,points,tkpoints,team,kill",
+        "FieldName":"TK Points",
+        "InputType":"number",
+        "ParamFieldName":"TK_ForgiveAfterRounds",
+        "DefaultValue":"2",
+        "Placeholder":"0",
+        "Suffix":"points",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Team Killer Points Forgiven",
+        "Category":"MB2 Server Settings",
+        "Description":"The amount of points automatically forgiven, if no further TKing has occured. 0 = Disabled",
+        "Keywords":"tk,forgive,points,tkpoints,team,kill",
+        "FieldName":"TK Points",
+        "InputType":"number",
+        "ParamFieldName":"TK_RemovedPerRound",
+        "DefaultValue":"100",
+        "Placeholder":"0",
+        "Suffix":"points",
+        "EnumValues":{}
+    },
+    {
+        "DisplayName":"Team Killer Rounds Ban",
+        "Category":"MB2 Server Settings",
+        "Description":"The amount of rounds the TKer is banned for, after reaching max TK points",
+        "Keywords":"tk,spec,kick,ban,points,tkpoints,team,kill",
+        "FieldName":"TK Points",
+        "InputType":"number",
+        "ParamFieldName":"TK_TempBanForRounds",
+        "DefaultValue":"10",
+        "Placeholder":"0",
+        "Suffix":"rounds",
+        "EnumValues":{}
     },
     {
         "DisplayName":"Initial Map",
