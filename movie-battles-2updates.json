@@ -62,7 +62,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "cmd.exe",
-        "UpdateSourceArgs": "/c dotnet \"{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe\" -s",
+        "UpdateSourceArgs": "dotnet \"{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe\" -s",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": false,
