@@ -62,7 +62,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -Command \"Start-Process -FilePath '{{$FullBaseDir}}\\MBII_CommandLine_Update_XPlatform.exee' -ArgumentList '-s'"",
+        "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -Command \"Start-Process -FilePath '{{$FullBaseDir}}\\MBII_CommandLine_Update_XPlatform.exee' -ArgumentList '-s'",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
