@@ -6,12 +6,14 @@
         "UpdateSourceData":"6020",
         "UpdateSourceTarget":"{{$FullRootDir}}client",
         "ForceDownloadPlatform":"Windows"
+        "OneShot":true
     },
     {
         "UpdateStageName":"Create Base Directory",
         "UpdateSourcePlatform":"All",
         "UpdateSource":"CreateDirectory",
         "UpdateSourceArgs":"{{$FullBaseDir}}base"
+        "OneShot":true
     },
     {
         "UpdateStageName":"Client File Copy",
@@ -20,6 +22,7 @@
         "UpdateSourceData":"cmd.exe",
         "UpdateSourceArgs":"/C xcopy /E /Y /I jka\\client\\GameData\\base\\assets*.pk3 jka\\server\\base\\ && rmdir /Q /S jka\\client\\",
         "SkipOnFailure":false
+        "OneShot":true
     },
     {
         "UpdateStageName":"OpenJK Download",
@@ -31,6 +34,7 @@
         "UnzipUpdateSource":true,
         "OverwriteExistingFiles":true,
         "DeleteAfterExtract":true
+        "OneShot":true
     },
     {
         "UpdateStageName":"Server.cfg Download",
@@ -40,6 +44,7 @@
         "UpdateSourceArgs":"server.cfg",
         "UpdateSourceTarget":"{{$FullBaseDir}}base",
         "OverwriteExistingFiles":false
+        "OneShot":true
     },
     {
         "UpdateStageName": "Downloading MB2 CLI Updater",
@@ -56,8 +61,8 @@
         "UpdateStageName": "Downloading MB2 Server files",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "Executable",
-        "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -Command \"Start-Process -FilePath '{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe' -ArgumentList '-s' -NoNewWindow -Wait\"",
+        "UpdateSourceData": "{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe",
+        "UpdateSourceArgs": "-s",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": false,
