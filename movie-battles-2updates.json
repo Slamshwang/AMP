@@ -61,11 +61,11 @@
         "UpdateStageName": "Running MBII CommandLine Update",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
-        "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -Command \"Start-Process -FilePath '{{$FullBaseDir}}\\MBII_CommandLine_Update_XPlatform.exe' -ArgumentList '-s'",
+        "UpdateSourceData": "cmd.exe",
+        "UpdateSourceArgs": "/c dotnet \"{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe\" -s",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true,
+        "DeleteAfterExtract": false,
         "OneShot": false
     }
 
