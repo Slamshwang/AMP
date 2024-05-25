@@ -58,16 +58,15 @@
         "OneShot": false
     },
     {
-        "UpdateStageName": "Downloading MB2 Server files",
-        "UpdateSourcePlatform": "All",
+        "UpdateStageName": "Running MBII CommandLine Update",
+        "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
-        "UpdateSourceData": "{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe",
-        "UpdateSourceArgs": "-s",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-ExecutionPolicy Bypass -s -File \"{{$FullBaseDir}}\\run_patcher.ps1\"",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": false,
+        "DeleteAfterExtract": true,
         "OneShot": false
-    }
-
+}
 
 ]
