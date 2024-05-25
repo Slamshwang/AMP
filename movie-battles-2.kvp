@@ -4,7 +4,7 @@ Meta.OS=Windows, Linux
 Meta.Arch=Windows, Linux
 Meta.Author=Chris - Made with AMP Config Generator
 Meta.URL=https://www.moviebattles.org/
-Meta.DisplayImageSource=steam:https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fj2h0xh4vq9b01.png
+Meta.DisplayImageSource=https://community.moviebattles.org/img/logo_mb.png
 Meta.EndpointURIFormat=steam://connect/{0}
 Meta.ConfigManifest=jedi-academyconfig.json
 Meta.MetaConfigManifest=movie-battles-2config.json
