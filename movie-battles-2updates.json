@@ -62,11 +62,12 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-ExecutionPolicy Bypass -s -File \"{{$FullBaseDir}}\\run_patcher.ps1\"",
+        "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -Command \"Start-Process -FilePath '{{$FullBaseDir}}\\MBII_CommandLine_Update_XPlatform.exee' -ArgumentList '-s'"",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
         "OneShot": false
-}
+    }
+
 
 ]
