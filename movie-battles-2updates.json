@@ -34,7 +34,7 @@
         "UnzipUpdateSource":true,
         "OverwriteExistingFiles":true,
         "DeleteAfterExtract":true
-        "OneShot":flase
+        "OneShot":false
     },
     {
         "UpdateStageName":"Server.cfg Download",
