@@ -58,8 +58,8 @@
         "OneShot": false
     },
     {
-        "UpdateStageName": "Running MBII CommandLine Update",
-        "UpdateSourcePlatform": "Windows",
+        "UpdateStageName": "Downloading MB2 Server files",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "Executable",
         "UpdateSourceData": "{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe",
         "UpdateSourceArgs": "-s",
@@ -68,6 +68,7 @@
         "DeleteAfterExtract": false,
         "OneShot": false
     }
+
 
 
 ]
