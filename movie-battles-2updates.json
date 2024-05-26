@@ -6,14 +6,14 @@
         "UpdateSourceData":"6020",
         "UpdateSourceTarget":"{{$FullRootDir}}client",
         "ForceDownloadPlatform":"Windows"
-        "OneShot":false
+        "OneShot":true
     },
     {
         "UpdateStageName":"Create Base Directory",
         "UpdateSourcePlatform":"All",
         "UpdateSource":"CreateDirectory",
         "UpdateSourceArgs":"{{$FullBaseDir}}base"
-        "OneShot":false
+        "OneShot":true
     },
     {
         "UpdateStageName":"Client File Copy",
@@ -22,7 +22,7 @@
         "UpdateSourceData":"cmd.exe",
         "UpdateSourceArgs":"/C xcopy /E /Y /I jka\\client\\GameData\\base\\assets*.pk3 jka\\server\\base\\ && rmdir /Q /S jka\\client\\",
         "SkipOnFailure":false
-        "OneShot":false
+        "OneShot":true
     },
     {
         "UpdateStageName":"OpenJK Download",
@@ -34,7 +34,7 @@
         "UnzipUpdateSource":true,
         "OverwriteExistingFiles":true,
         "DeleteAfterExtract":true
-        "OneShot":false
+        "OneShot":true
     },
     {
         "UpdateStageName":"Server.cfg Download",
