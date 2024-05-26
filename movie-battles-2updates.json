@@ -57,18 +57,4 @@
         "DeleteAfterExtract": true,
         "OneShot": false
     },
-    {
-        "UpdateStageName": "Downloading MB2 Server files",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "patcher.ps1",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": false,
-        "OneShot": false
-    }
-
-
-
 ]
