@@ -74,11 +74,11 @@
         "UpdateStageName": "Downloading MB2 Server Files",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "cmd.exe",
-        "UpdateSourceData": "{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe",
-        "UpdateSourceArgs": "-s --no-console-ops",
+        "UpdateSourceData": "{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe -s",
+        "UpdateSourceArgs": "",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": true,
+        "DeleteAfterExtract": false,
         "OneShot": false
     }
 ]
