@@ -1,18 +1,19 @@
 [
     {
-        "UpdateStageName":"SteamCMD Game Files Download",
-        "UpdateSourcePlatform":"All",
-        "UpdateSource":"SteamCMD",
-        "UpdateSourceData":"6020",
-        "UpdateSourceTarget":"{{$FullRootDir}}client",
-        "ForceDownloadPlatform":"Windows"
-        "OneShot":false
+        "UpdateStageName": "SteamCMD Game Files Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceArgs": "6020",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
     },
     {
         "UpdateStageName":"Create Base Directory",
         "UpdateSourcePlatform":"All",
         "UpdateSource":"CreateDirectory",
-        "UpdateSourceArgs":"{{$FullBaseDir}}base"
+        "UpdateSourceArgs":"{{$FullBaseDir}}base",
         "OneShot":false
     },
     {
@@ -21,51 +22,50 @@
         "UpdateSource":"Executable",
         "UpdateSourceData":"cmd.exe",
         "UpdateSourceArgs":"/C xcopy /E /Y /I jka\\client\\GameData\\base\\assets*.pk3 jka\\server\\base\\ && rmdir /Q /S jka\\client\\",
-        "SkipOnFailure":false
+        "SkipOnFailure":false,
         "OneShot":false
     },
     {
-        "UpdateStageName":"OpenJK Download",
-        "UpdateSourcePlatform":"Windows",
-        "UpdateSource":"GithubRelease",
-        "UpdateSourceArgs":"JACoders/OpenJK",
-        "UpdateSourceData":"OpenJK-windows-x86_64.zip",
-        "UpdateSourceTarget":"{{$FullBaseDir}}",
-        "UnzipUpdateSource":true,
-        "OverwriteExistingFiles":true,
-        "DeleteAfterExtract":true
-        "OneShot":false
+        "UpdateStageName": "OpenJK Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "GithubRelease",
+        "UpdateSourceData": "OpenJK-windows-x86_64.zip",
+        "UpdateSourceArgs": "JACoders/OpenJK",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
     },
     {
-        "UpdateStageName":"Server.cfg Download",
-        "UpdateSourcePlatform":"All",
-        "UpdateSource":"FetchURL",
-        "UpdateSourceData":"https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/jedi-academyserver.cfg",
-        "UpdateSourceArgs":"server.cfg",
-        "UpdateSourceTarget":"{{$FullBaseDir}}base",
-        "OverwriteExistingFiles":false
-        "OneShot":false
+        "UpdateStageName": "Server Config Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/jedi-academyserver.cfg",
+        "UpdateSourceTarget": "{{$FullBaseDir}}base",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": false,
+        "OneShot": false
     },
     {
         "UpdateStageName": "Downloading MB2 CLI Updater",
-        "UpdateSourcePlatform": "All",
+        "UpdateSourcePlatform": "Windows",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://www.moviebattles.org/download/MBII_CLI_Updater.zip",
-        "UpdateSourceTarget": "{{$FullBaseDir}}",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
         "OneShot": false
     },
     {
-        "UpdateStageName": "Downloading MB2 Server files",
-        "UpdateSourcePlatform": "All",
+        "UpdateStageName": "Downloading MB2 Server Files",
+        "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe",
         "UpdateSourceArgs": "-s",
         "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": false,
-        "OneShot": false    
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
     }
 ]
