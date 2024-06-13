@@ -22,6 +22,14 @@
         "SkipOnFailure":false
     },
     {
+        "UpdateStageName":"Client File Copy",
+        "UpdateSourcePlatform":"Linux",
+        "UpdateSource":"Executable",
+        "UpdateSourceData":"/bin/bash",
+        "UpdateSourceArgs":"-c '\\cp -rf ./jka/client/GameData/base/assets*.pk3 ./jka/server/base/ && rm -rf ./jka/client/'",
+        "SkipOnFailure":false
+    },
+    {
         "UpdateStageName":"OpenJK Download",
         "UpdateSourcePlatform":"Windows",
         "UpdateSource":"GithubRelease",
@@ -31,5 +39,46 @@
         "UnzipUpdateSource":true,
         "OverwriteExistingFiles":true,
         "DeleteAfterExtract":true
+    },
+    {
+        "UpdateStageName":"OpenJK Download",
+        "UpdateSourcePlatform":"Linux",
+        "UpdateSource":"GithubRelease",
+        "UpdateSourceArgs":"JACoders/OpenJK",
+        "UpdateSourceData":"OpenJK-linux-x86_64.tar.gz",
+        "UpdateSourceTarget":"{{$FullBaseDir}}",
+        "UnzipUpdateSource":true,
+        "OverwriteExistingFiles":true,
+        "DeleteAfterExtract":true
+    },
+    {
+        "UpdateStageName":"Server.cfg Download",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"FetchURL",
+        "UpdateSourceData":"https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/jedi-academyserver.cfg",
+        "UpdateSourceArgs":"server.cfg",
+        "UpdateSourceTarget":"{{$FullBaseDir}}base",
+        "OverwriteExistingFiles":false
+    }
+        {
+        "UpdateStageName": "Downloading MB2 CLI Updater",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://www.moviebattles.org/download/MBII_CLI_Updater.zip",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "OneShot": true
+    },
+    {
+        "UpdateStageName": "Downloading MB2 Server Files",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe",
+        "UpdateSourceArgs": "-s",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": true,
+        "OneShot": false
     }
 ]
