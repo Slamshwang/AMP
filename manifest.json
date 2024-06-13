@@ -1,9 +1,9 @@
 {
-    "id":"a96d6fea-eebf-4a21-becc-ecb3ba4fc1f0",
-    "authors":["Chris"],
-    "origin":"https://github.com/Slamshwang/AMP.git",
-    "url":"https://github.com/Slamshwang/AMP",
-    "imagefile":"",
-    "prefix":"",
-    "repotype":"AppTemplates"
+        "id":"a96d6fea-eebf-4a21-becc-ecb3ba4fc1f0",
+        "authors":["Chris"],
+        "origin":"https://github.com/Slamshwang/AMP.git",
+        "url":"https://github.com/Slamshwang/AMP",
+        "imagefile":"",
+        "prefix":"",
+        "repotype":"AppTemplates"
 }
