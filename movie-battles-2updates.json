@@ -60,25 +60,4 @@
         "UpdateSourceTarget":"{{$FullBaseDir}}base",
         "OverwriteExistingFiles":false
     }
-        {
-        "UpdateStageName": "Downloading MB2 CLI Updater",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://www.moviebattles.org/download/MBII_CLI_Updater.zip",
-        "UnzipUpdateSource": true,
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true,
-        "OneShot": true
-    },
-    {
-        "UpdateStageName": "Downloading MB2 Server Files",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe",
-        "UpdateSourceArgs": "-s",
-        "UnzipUpdateSource": false,
-        "OverwriteExistingFiles": false,
-        "DeleteAfterExtract": true,
-        "OneShot": false
-    }
 ]
