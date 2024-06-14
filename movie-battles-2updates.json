@@ -43,14 +43,13 @@
         "OneShot":true
     },
     {
-        "UpdateStageName":"Downloading MB2 Server Files",
-        "UpdateSourcePlatform":"Windows",
-        "UpdateSource":"Executable",
-        "UpdateSourceData":"{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe",
-        "UpdateSourceArgs":"-s",
-        "UnzipUpdateSource":false,
-        "OverwriteExistingFiles":false,
-        "DeleteAfterExtract":true,
-        "OneShot":false
+        "UpdateStageName": "Downloading MB2 Server Files",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "cmd.exe",
+        "UpdateSourceArgs": "/C {{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe -s",
+        "UnzipUpdateSource": false,
+        "OverwriteExistingFiles": false,
+        "DeleteAfterExtract": false
     }
 ]
