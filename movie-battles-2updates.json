@@ -46,8 +46,8 @@
         "UpdateStageName": "Downloading MB2 Server Files",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
-        "UpdateSourceData": "cmd.exe",
-        "UpdateSourceArgs": "/C start /B powershell -WindowStyle Hidden -Command \"& {Start-Process -FilePath '{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe' -ArgumentList '-s' -NoNewWindow -Wait}\"",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -Command \"& { $process = Start-Process '{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe' -ArgumentList '-s' -NoNewWindow -PassThru; $process.WaitForExit(); Write-Output $process.StandardOutput.ReadToEnd(); Write-Error $process.StandardError.ReadToEnd() }\"",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": false
