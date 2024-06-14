@@ -46,8 +46,8 @@
         "UpdateStageName": "Downloading MB2 Server Files",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
-        "UpdateSourceData": "cmd.exe",
-        "UpdateSourceArgs": "/C {{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe -s",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-WindowStyle Hidden -Command \"Start-Process '{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe' -ArgumentList '-s' -NoNewWindow -Wait\"",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": false
