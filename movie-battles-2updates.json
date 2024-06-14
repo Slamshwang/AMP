@@ -47,7 +47,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-WindowStyle Hidden -Command \"Start-Process '{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe' -ArgumentList '-s' -NoNewWindow -Wait\"",
+        "UpdateSourceArgs": "-Command \"Start-Process '{{$FullBaseDir}}MBII_CommandLine_Update_XPlatform.exe' -ArgumentList '-s' -WindowStyle Hidden -NoNewWindow -RedirectStandardOutput '{{$FullBaseDir}}mb2output.log' -RedirectStandardError '{{$FullBaseDir}}mb2error.log'\"",
         "UnzipUpdateSource": false,
         "OverwriteExistingFiles": false,
         "DeleteAfterExtract": false
