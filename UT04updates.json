@@ -1,0 +1,10 @@
+[
+    {
+        "UpdateStageName":"SteamCMD Game Files Download",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"SteamCMD",
+        "UpdateSourceData":"13230",
+        "UpdateSourceTarget":"{{$FullRootDir}}client",
+        "ForceDownloadPlatform":"Windows"
+    }
+]
